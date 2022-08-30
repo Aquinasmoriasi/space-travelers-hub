@@ -6,7 +6,7 @@ import rocketsReducer from './rockets/rockets';
 
 const rootReducer = combineReducers({
   rockets: rocketsReducer,
-  missions: missionsReducer
+  missions: missionsReducer,
 });
 
 const store = configureStore({
