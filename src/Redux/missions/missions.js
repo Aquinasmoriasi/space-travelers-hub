@@ -13,6 +13,7 @@ const filteredMissions = (data) => {
     mission_name: mission.mission_name,
     description: mission.description,
   }));
+  console.log(showMissions(missions));
   return showMissions(missions);
 };
 
