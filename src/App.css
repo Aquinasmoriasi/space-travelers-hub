@@ -14,7 +14,15 @@ header {
   align-items: center;
 }
 
+a {
+  text-decoration: none;
+}
+
 .logo {
   display: flex;
   align-items: center;
+}
+
+.active {
+  text-decoration: underline;
 }
