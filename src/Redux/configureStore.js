@@ -10,7 +10,6 @@ const rootReducer = combineReducers({
   missions: missionsReducer,
 });
 
-
 const store = configureStore({
   reducer: rootReducer,
   middleware: [thunk],
