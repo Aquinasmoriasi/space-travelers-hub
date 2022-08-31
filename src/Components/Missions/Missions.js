@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Table from 'react-bootstrap/Table';
-import Badge from 'react-bootstrap/Badge';
 import Button from 'react-bootstrap/Button';
+import { Badge } from 'react-bootstrap';
 import { fetchMissions, joinMission } from '../../Redux/missions/missions';
 
 const Missions = () => {
@@ -35,10 +35,21 @@ const Missions = () => {
         <tbody>
           {missions.map((mission) => (
             <tr key={mission.id}>
-              <td className="mission-name text-rigth">{mission.mission_name}</td>
+              <td className="mission-name">{mission.mission_name}</td>
               <td className="description-col">{mission.description}</td>
               <td className="badge-cell status">
-                <Badge className="badge" bg="secondary">{mission.reserved ? 'Active Member' : 'Not a Member'}</Badge>
+                <Badge
+                  // className="badge"
+                  className={`${
+                    mission.reserved ? 'mission-passive' : 'mission-active'
+                  }`}
+                  // bg="secondary"
+                  bg={`${
+                    mission.reserved ? 'primary' : 'secondary'
+                  }`}
+                >
+                  {mission.reserved ? 'Active Member' : 'Not a Member'}
+                </Badge>
               </td>
               <td className="button-cell action">
                 <Button key={mission.id} variant="outline-secondary" type="button" onClick={() => toggleReservation(mission)}>
