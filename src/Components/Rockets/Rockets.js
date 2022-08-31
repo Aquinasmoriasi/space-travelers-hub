@@ -12,7 +12,7 @@ const Rockets = () => {
   }, [dispatch]);
   const rockets = useSelector((state) => state.rockets);
   return (
-    <ListGroup>
+    <ListGroup className="pb-4 pt-2 ms-4 me-4 border-top rounded-0 border-2">
       {rockets.map((rocket) => (
         <Rocket key={rocket.id} rocket={rocket} />
       ))}

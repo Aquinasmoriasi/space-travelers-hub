@@ -1,5 +1,5 @@
 import React from 'react';
-import { ListGroup, Button, Badge } from 'react-bootstrap';
+import { ListGroup, Button } from 'react-bootstrap';
 import { PropTypes } from 'prop-types';
 
 const Rocket = ({ rocket }) => {
@@ -7,12 +7,18 @@ const Rocket = ({ rocket }) => {
     id, name, image, description,
   } = rocket;
   return (
-    <ListGroup.Item key={id} id={id}>
-      <div><img src={image} alt={id} /></div>
-      <div>
-        <Badge>Reserved</Badge>
-        <p>{name}</p>
-        <p>{description}</p>
+    <ListGroup.Item className="d-flex gap-4 border-0" key={id} id={id}>
+      <div
+        className="rocket col-3"
+        style={{
+          backgroundImage: `url(${image})`,
+        }}
+      />
+      <div className="col-9`">
+        <p className="name">{name}</p>
+        <p>
+          {description}
+        </p>
         <Button variant="primary" type="button">
           Reserve Rocket
         </Button>
