@@ -3,7 +3,11 @@ import { useSelector, useDispatch } from 'react-redux';
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
 import { Badge } from 'react-bootstrap';
-import { fetchMissions, joinMission, leaveMission } from '../../Redux/missions/missions';
+import {
+  fetchMissions,
+  joinMission,
+  leaveMission,
+} from '../../Redux/missions/missions';
 
 const Missions = () => {
   const missions = useSelector((state) => state.missions);
@@ -44,15 +48,20 @@ const Missions = () => {
                   className={`${
                     mission.reserved ? 'mission-passive' : 'mission-active'
                   }`}
-                  bg={`${
-                    mission.reserved ? 'primary' : 'secondary'
-                  }`}
+                  bg={`${mission.reserved ? 'primary' : 'secondary'}`}
                 >
                   {mission.reserved ? 'Active Member' : 'NOT A MEMEBER'}
                 </Badge>
               </td>
               <td className="button-cell action">
-                <Button key={mission.id} variant="outline-secondary" type="button" onClick={() => toggleReservation(mission)}>
+                <Button
+                  key={mission.id}
+                  variant={`${
+                    mission.reserved ? 'outline-danger' : 'aoutline-secondary'
+                  }`}
+                  type="button"
+                  onClick={() => toggleReservation(mission)}
+                >
                   {mission.reserved ? 'Leave Mission' : 'Join Mission'}
                 </Button>
               </td>
