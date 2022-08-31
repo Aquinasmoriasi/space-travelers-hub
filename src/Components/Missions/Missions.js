@@ -39,11 +39,9 @@ const Missions = () => {
               <td className="description-col">{mission.description}</td>
               <td className="badge-cell status">
                 <Badge
-                  // className="badge"
                   className={`${
                     mission.reserved ? 'mission-passive' : 'mission-active'
                   }`}
-                  // bg="secondary"
                   bg={`${
                     mission.reserved ? 'primary' : 'secondary'
                   }`}
