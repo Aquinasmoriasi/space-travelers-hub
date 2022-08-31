@@ -8,10 +8,11 @@ export const fetchRockets = createAsyncThunk(FETCH_ROCKETS, async () => {
   const arr = [];
   const keys = Object.keys(data);
   keys.map((key) => arr.push({
-    rocket_id: data[key].rocket_id,
-    rocket_name: data[key].rocket_name,
-    rocket_type: data[key].rocket_type,
-    flickr_images: data[key].flickr_images,
+    id: data[key].rocket_id,
+    name: data[key].rocket_name,
+    description: data[key].description,
+    type: data[key].rocket_type,
+    image: data[key].flickr_images[0],
   }));
   return arr;
 });
