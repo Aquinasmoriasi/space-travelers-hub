@@ -48,7 +48,7 @@ const Missions = () => {
                     mission.reserved ? 'primary' : 'secondary'
                   }`}
                 >
-                  {mission.reserved ? 'Active Member' : 'Not a Member'}
+                  {mission.reserved ? 'Active Member' : 'NOT A MEMEBER'}
                 </Badge>
               </td>
               <td className="button-cell action">
