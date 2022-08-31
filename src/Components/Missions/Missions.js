@@ -30,12 +30,12 @@ const Missions = () => {
         <tbody>
           {missions.map((mission) => (
             <tr key={mission.mission_id}>
-              <td className="text-rigth">{mission.mission_name}</td>
+              <td className="mission-name text-rigth">{mission.mission_name}</td>
               <td className="description-col">{mission.description}</td>
-              <td>
-                <Badge bg="secondary">NOT A MEMBER</Badge>
+              <td className="badge-cell">
+                <Badge className="badge" bg="secondary">NOT A MEMBER</Badge>
               </td>
-              <td>
+              <td className="button-cell">
                 <Button variant="outline-secondary" type="button">
                   Join Mission
                 </Button>
