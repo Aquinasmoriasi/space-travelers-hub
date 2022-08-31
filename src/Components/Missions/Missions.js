@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
 import { Badge } from 'react-bootstrap';
-import { fetchMissions, joinMission } from '../../Redux/missions/missions';
+import { fetchMissions, joinMission, leaveMission } from '../../Redux/missions/missions';
 
 const Missions = () => {
   const missions = useSelector((state) => state.missions);
@@ -17,6 +17,8 @@ const Missions = () => {
   const toggleReservation = (mission) => {
     if (!mission.reserved) {
       dispatch(joinMission(mission.id));
+    } else {
+      dispatch(leaveMission(mission.id));
     }
   };
 
