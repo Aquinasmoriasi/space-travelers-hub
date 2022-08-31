@@ -55,3 +55,7 @@ nav {
 .name {
   font-weight: 500;
 }
+
+.table-section {
+  padding: 0 16px;
+}
