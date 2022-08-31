@@ -41,4 +41,5 @@ export default function missionsReducer(state = [], action) {
       });
     default:
       return state;
-  }}
+  }
+}
