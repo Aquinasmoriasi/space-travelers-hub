@@ -50,7 +50,8 @@ const Missions = () => {
                   }`}
                   bg={`${mission.reserved ? 'primary' : 'secondary'}`}
                 >
-                  {mission.reserved ? 'Active Member' : 'NOT A MEMEBER'}
+                  {mission.reserved && 'Active Member'}
+                  {!mission.reserved && 'NOT A MEMBER'}
                 </Badge>
               </td>
               <td className="button-cell action">
@@ -62,7 +63,8 @@ const Missions = () => {
                   type="button"
                   onClick={() => toggleReservation(mission)}
                 >
-                  {mission.reserved ? 'Leave Mission' : 'Join Mission'}
+                  {mission.reserved && 'Leave Mission'}
+                  {!mission.reserved && 'Join Mission'}
                 </Button>
               </td>
             </tr>
