@@ -22,9 +22,9 @@ describe('Mission', () => {
   });
 
   it('Should update the state with API data', () => {
-    expect(
-      missionsReducer(missionsData, showMissions(missionsData)),
-    ).toEqual(missionsData);
+    expect(missionsReducer(missionsData, showMissions(missionsData))).toEqual(
+      missionsData,
+    );
   });
 
   it('Should update the state with correct id to reserved: true', () => {
