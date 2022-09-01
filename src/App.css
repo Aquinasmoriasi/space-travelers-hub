@@ -70,3 +70,9 @@ nav {
   display: table-cell;
   vertical-align: middle;
 }
+
+.profile-tables {
+  padding: 0 16px;
+  display: flex;
+  justify-content: space-between;
+}
