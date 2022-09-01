@@ -47,7 +47,7 @@ Rocket.propTypes = {
     id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
-    reserved: PropTypes.bool.isRequired,
+    reserved: PropTypes.bool,
   }).isRequired,
   reserve: PropTypes.func.isRequired,
   cancel: PropTypes.func.isRequired,
