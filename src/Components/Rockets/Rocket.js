@@ -2,12 +2,12 @@ import React from 'react';
 import { ListGroup, Button } from 'react-bootstrap';
 import { PropTypes } from 'prop-types';
 
-const Rocket = ({ rocket }) => {
+const Rocket = ({ rocket, reserve, cancel }) => {
   const {
-    id, name, image, description,
+    id, name, image, description, reserved,
   } = rocket;
   return (
-    <ListGroup.Item className="d-flex gap-4 border-0" key={id} id={id}>
+    <ListGroup.Item className="d-flex gap-4 border-0" key={id}>
       <div
         className="rocket col-3"
         style={{
@@ -16,12 +16,23 @@ const Rocket = ({ rocket }) => {
       />
       <div className="col-9`">
         <p className="name">{name}</p>
-        <p>
-          {description}
-        </p>
-        <Button variant="primary" type="button">
-          Reserve Rocket
-        </Button>
+        <p>{description}</p>
+        {!reserved && (
+          <Button id={id} variant="primary" type="button" onClick={reserve}>
+            Reserve Rocket
+          </Button>
+        )}
+        {reserved && (
+          <Button
+            id={id}
+            variant="secondary"
+            className="bg-light text-secondary"
+            type="button"
+            onClick={cancel}
+          >
+            Cancel Reservation
+          </Button>
+        )}
       </div>
     </ListGroup.Item>
   );
@@ -33,7 +44,10 @@ Rocket.propTypes = {
     id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
+    reserved: PropTypes.bool.isRequired,
   }).isRequired,
+  reserve: PropTypes.func.isRequired,
+  cancel: PropTypes.func.isRequired,
 };
 
 export default Rocket;
