@@ -2,12 +2,12 @@ import React from 'react';
 import { ListGroup, Button } from 'react-bootstrap';
 import { PropTypes } from 'prop-types';
 
-const Rocket = ({ rocket }) => {
+const Rocket = ({ rocket, reserve }) => {
   const {
     id, name, image, description,
   } = rocket;
   return (
-    <ListGroup.Item className="d-flex gap-4 border-0" key={id} id={id}>
+    <ListGroup.Item className="d-flex gap-4 border-0" key={id}>
       <div
         className="rocket col-3"
         style={{
@@ -19,7 +19,7 @@ const Rocket = ({ rocket }) => {
         <p>
           {description}
         </p>
-        <Button variant="primary" type="button">
+        <Button id={id} variant="primary" type="button" onClick={reserve}>
           Reserve Rocket
         </Button>
       </div>
@@ -34,6 +34,7 @@ Rocket.propTypes = {
     name: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
   }).isRequired,
+  reserve: PropTypes.func.isRequired,
 };
 
 export default Rocket;
