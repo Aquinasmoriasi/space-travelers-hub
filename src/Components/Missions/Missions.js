@@ -57,7 +57,7 @@ const Missions = () => {
                 <Button
                   key={mission.id}
                   variant={`${
-                    mission.reserved ? 'outline-danger' : 'aoutline-secondary'
+                    mission.reserved ? 'outline-danger' : 'outline-secondary'
                   }`}
                   type="button"
                   onClick={() => toggleReservation(mission)}
