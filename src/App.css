@@ -71,3 +71,9 @@ nav {
   vertical-align: middle;
   width: 140px;
 }
+
+.profile-tables {
+  padding: 0 16px;
+  display: flex;
+  justify-content: space-between;
+}
