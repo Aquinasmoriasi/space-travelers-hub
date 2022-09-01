@@ -30,14 +30,14 @@ describe('Mission', () => {
   it('Should update the state with correct id to reserved: true', () => {
     const missionId = '8E0A6D0';
     expect(missionsReducer(missionsData, joinMission(missionId))).toEqual(
-      missionsData.map((mission) => (mission.id === missionId ? { ...mission, reserved: true } : mission)),
+      missionsData.map((item) => (item.id === missionId ? { ...item, reserved: true } : item)),
     );
   });
 
   it('Should update the state with correct id to reserved: false', () => {
     const missionId = 'E3E72CD';
     expect(missionsReducer(missionsData, leaveMission(missionId))).toEqual(
-      missionsData.map((mission) => (mission.id === missionId ? { ...mission, reserved: false } : mission)),
+      missionsData.map((item) => (item.id === missionId ? { ...item, reserved: false } : item)),
     );
   });
 });
