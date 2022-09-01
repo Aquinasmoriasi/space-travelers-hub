@@ -8,8 +8,8 @@ const Profile = () => {
   const activeMissions = missions.filter((mission) => mission.reserved);
 
   return (
-    <section className="profile-tables">
-      <div className="mission-list">
+    <section className="profile-tables pb-4 pt-2 ms-4 me-4 border-top rounded-0 border-2">
+      <div className="mission-list col-5">
         <h2>My Missons</h2>
         <Table bordered>
           <tbody>
@@ -20,6 +20,11 @@ const Profile = () => {
             ))}
           </tbody>
         </Table>
+      </div>
+      <div className="rocket-list col-5">
+        {/* rockets */}
+        <h2>My Rockets</h2>
+
       </div>
     </section>
   );
