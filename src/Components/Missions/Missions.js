@@ -15,8 +15,10 @@ const Missions = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchMissions());
-  }, [dispatch]);
+    if ((missions || []).length === 0) {
+      dispatch(fetchMissions());
+    }
+  }, []);
 
   const toggleReservation = (mission) => {
     if (!mission.reserved) {
