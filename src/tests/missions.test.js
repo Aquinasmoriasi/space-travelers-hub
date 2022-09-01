@@ -28,16 +28,16 @@ describe('Mission', () => {
   });
 
   it('Should update the state with correct id to reserved: true', () => {
-    const missionId = '9D1B7E0';
+    const missionId = '8E0A6D0';
     expect(missionsReducer(missionsData, joinMission(missionId))).toEqual(
-      missionsData.map((d) => (d.id === missionId ? { ...d, reserved: true } : d)),
+      missionsData.map((mission) => (mission.id === missionId ? { ...mission, reserved: true } : mission)),
     );
   });
 
   it('Should update the state with correct id to reserved: false', () => {
-    const missionId = 'F4F83DE';
+    const missionId = 'E3E72CD';
     expect(missionsReducer(missionsData, leaveMission(missionId))).toEqual(
-      missionsData.map((d) => (d.id === missionId ? { ...d, reserved: false } : d)),
+      missionsData.map((mission) => (mission.id === missionId ? { ...mission, reserved: false } : mission)),
     );
   });
 });
