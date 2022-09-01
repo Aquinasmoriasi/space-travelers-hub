@@ -1,5 +1,5 @@
 import React from 'react';
-import { ListGroup, Button } from 'react-bootstrap';
+import { ListGroup, Button, Badge } from 'react-bootstrap';
 import { PropTypes } from 'prop-types';
 
 const Rocket = ({ rocket, reserve, cancel }) => {
@@ -16,7 +16,10 @@ const Rocket = ({ rocket, reserve, cancel }) => {
       />
       <div className="col-9`">
         <p className="name">{name}</p>
-        <p>{description}</p>
+        <p>
+          {reserved && <Badge bg="info" className="me-2">Reserved</Badge>}
+          {description}
+        </p>
         {!reserved && (
           <Button id={id} variant="primary" type="button" onClick={reserve}>
             Reserve Rocket
