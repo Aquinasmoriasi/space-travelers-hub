@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import store from '../Redux/configureStore';
-import Missions from '../components/Missions/Missions';
+import Missions from '../components/Missions/Missions.js';
 import missionsReducer, {
   showMissions,
   joinMission,
