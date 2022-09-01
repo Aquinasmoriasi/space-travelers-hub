@@ -55,3 +55,24 @@ nav {
 .name {
   font-weight: 500;
 }
+
+.table-section {
+  padding: 0 16px;
+}
+
+.mission-name {
+  font-weight: bold;
+}
+
+.badge-cell,
+.button-cell {
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.profile-tables {
+  padding: 0 16px;
+  display: flex;
+  justify-content: space-between;
+}
