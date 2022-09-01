@@ -69,8 +69,5 @@ nav {
   text-align: center;
   display: table-cell;
   vertical-align: middle;
-}
-
-.badge-cell, .button-cell {
   width: 140px;
 }
