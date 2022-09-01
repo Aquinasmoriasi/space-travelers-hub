@@ -18,7 +18,7 @@ const Missions = () => {
     if ((missions || []).length === 0) {
       dispatch(fetchMissions());
     }
-  }, []);
+  }, [dispatch, missions]);
 
   const toggleReservation = (mission) => {
     if (!mission.reserved) {
