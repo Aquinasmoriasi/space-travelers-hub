@@ -27,7 +27,7 @@ const Missions = () => {
       dispatch(leaveMission(mission.id));
     }
   };
-  
+
   const missionHeadings = ['Missions', 'Description', 'Status', 'Action'];
 
   return (
