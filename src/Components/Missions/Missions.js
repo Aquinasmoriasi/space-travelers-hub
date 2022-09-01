@@ -9,6 +9,7 @@ import {
   leaveMission,
 } from '../../Redux/missions/missions';
 
+
 const Missions = () => {
   const missions = useSelector((state) => state.missions);
 
@@ -28,9 +29,12 @@ const Missions = () => {
     }
   };
 
+
+
   const missionHeadings = ['Missions', 'Description', 'Status', 'Action'];
 
   return (
+
     <section className="table-section pb-4 pt-2 ms-4 me-4 border-top rounded-0 border-2">
       <Table className="mt-2" striped bordered hover>
         <thead>
@@ -74,6 +78,8 @@ const Missions = () => {
         </tbody>
       </Table>
     </section>
+  
+
   );
 };
 
