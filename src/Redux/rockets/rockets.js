@@ -2,6 +2,7 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 
 const FETCH_ROCKETS = 'space-travellers-app/redux/FETCH_ROCKETS';
 const RESERVE_ROCKETS = 'space-travellers-app/redux/RESERVE_ROCKETS';
+const CANCEL_ROCKETS = 'space-travellers-app/redux/CANCEL_ROCKETS';
 
 export const fetchRockets = createAsyncThunk(FETCH_ROCKETS, async () => {
   const response = await fetch('https://api.spacexdata.com/v3/rockets');
@@ -31,6 +32,13 @@ const rocketsReducer = (state = initialState, action) => {
         }
         return state;
       });
+    case CANCEL_ROCKETS:
+      return state.map((state) => {
+        if (state.id === action.payload) {
+          return { ...state, reserved: false };
+        }
+        return state;
+      });
     default:
       return state;
   }
@@ -38,6 +46,11 @@ const rocketsReducer = (state = initialState, action) => {
 
 export const reserveRocket = (id) => ({
   type: RESERVE_ROCKETS,
+  payload: id,
+});
+
+export const cancelRocket = (id) => ({
+  type: CANCEL_ROCKETS,
   payload: id,
 });
 
