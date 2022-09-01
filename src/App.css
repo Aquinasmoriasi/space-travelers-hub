@@ -69,5 +69,6 @@ nav {
   text-align: center;
   display: table-cell;
   vertical-align: middle;
-  width: 140px;
+
+  /* width: 140px; */
 }

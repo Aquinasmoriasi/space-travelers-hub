@@ -43,9 +43,9 @@ const Missions = () => {
         <tbody>
           {missions.map((mission) => (
             <tr key={mission.id}>
-              <td className="mission-name">{mission.mission_name}</td>
-              <td className="description-col">{mission.description}</td>
-              <td className="badge-cell status">
+              <td className="mission-name col-1">{mission.mission_name}</td>
+              <td className="description-col col-5">{mission.description}</td>
+              <td className="badge-cell status col-1">
                 <Badge
                   className={`${
                     mission.reserved ? 'mission-passive' : 'mission-active'
@@ -56,7 +56,7 @@ const Missions = () => {
                   {!mission.reserved && 'NOT A MEMBER'}
                 </Badge>
               </td>
-              <td className="button-cell action">
+              <td className="button-cell action col-1">
                 <Button
                   key={mission.id}
                   variant={`${
