@@ -1,7 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+  font-size: 30px;
+  margin-left: 12px;
+  font-weight: bolder;
 }
 
 .logo img {
@@ -12,6 +24,8 @@
 header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  padding: 1.5% 3.7%;
 }
 
 a {
@@ -25,4 +39,19 @@ a {
 
 .active {
   text-decoration: underline;
+}
+
+.rocket {
+  background-size: cover;
+  height: 200px;
+}
+
+nav {
+  display: flex;
+  gap: 30px;
+  font-size: 18px;
+}
+
+.name {
+  font-weight: 500;
 }
