@@ -1,38 +1,76 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: 'Poppins', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1 {
+  font-size: 30px;
+  margin-left: 12px;
+  font-weight: bolder;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.logo img {
+  width: 50px;
+  height: 50px;
+}
+
+header {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  padding: 1.5% 3.7%;
 }
 
-.App-link {
-  color: #61dafb;
+a {
+  text-decoration: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.active {
+  text-decoration: underline;
+}
+
+.rocket {
+  background-size: cover;
+  height: 200px;
+}
+
+nav {
+  display: flex;
+  gap: 30px;
+  font-size: 18px;
+}
+
+.name {
+  font-weight: 500;
+}
+
+.table-section {
+  padding: 0 16px;
+}
+
+.mission-name {
+  font-weight: bold;
+}
+
+.badge-cell,
+.button-cell {
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.profile-tables {
+  padding: 1.5% 3.7%;
 }
