@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
-import { useDispatch } from 'react-redux/es/exports';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { ListGroup } from 'react-bootstrap';
 import { fetchRockets, reserveRocket, cancelRocket } from '../../Redux/rockets/rockets';
 import Rocket from './Rocket';
